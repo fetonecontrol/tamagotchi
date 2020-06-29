@@ -7,6 +7,7 @@ describe('Pet', () => {
   beforeEach(function() {
     chuchu = new Pet ("Chuchu");
     chuchu.setHunger();
+    chuchu.setDepression();
   });  
 
   test('should correctly create a pet object with a name and happy and health meters', () => {
@@ -16,8 +17,8 @@ describe('Pet', () => {
   })
 
   test('should have 0 health after 20 seconds', function(){
-    jest.advanceTimersByTime(19000);
-    expect(chuchu.health).toEqual(1);
+    jest.advanceTimersByTime(20001);
+    expect(chuchu.health).toEqual(0);
   })
 
   test('should console log when health runs to 0', function(){
@@ -25,9 +26,14 @@ describe('Pet', () => {
     expect(dead).toEqual(false);
   })
 
-  test('should incriment this.health by 2 when called', () => {
+  test('should increment this.health by 2 when called', () => {
     chuchu.feed();
     expect(chuchu.health).toEqual(22);
+  })
+
+  test('should have 0 happy after 60 seconds', function(){
+    jest.advanceTimersByTime(60001);
+    expect(chuchu.happy).toEqual(0);
   })
 });
 

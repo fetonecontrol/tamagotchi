@@ -20,6 +20,12 @@ export class Pet{
     }, 1000);
   }
 
+  setDepression() {
+    setInterval(() => {
+      this.happy--;
+    }, 3000);
+  }
+
   checkDead(){
     if (this.health > 0) {
       return false;
