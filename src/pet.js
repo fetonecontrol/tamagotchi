@@ -1,12 +1,12 @@
 export class Game{
-  constructor(tamIndex){
-    this.tamIndex = tamIndex;
+  constructor(){
+    this.tamIndex = [];
   }
-
 };
 export class Pet{
-  constructor(health, happy){
-  this.health = health;
-  this.happy = happy;
+  constructor(name){
+  this.name = name;
+  this.health = 20;
+  this.happy = 20;
   }
 };
