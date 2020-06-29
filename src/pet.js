@@ -2,10 +2,11 @@ export class Game{
   constructor(){
     this.tamIndex = [];
   }
-  addPet(){
+  addPet(pet){
     this.tamIndex.push(pet);
   }
 };
+
 export class Pet{
   constructor(name){
   this.name = name;

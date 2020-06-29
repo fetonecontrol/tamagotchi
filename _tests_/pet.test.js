@@ -1,4 +1,4 @@
-import { Pet } from './../src/Pet.js';
+import { Pet, Game } from './../src/Pet.js';
 
 describe('Pet', () => {
 
@@ -9,4 +9,14 @@ describe('Pet', () => {
     expect(chuchu.health).toEqual(20);
   })
 
+});
+
+describe('Game', () => {
+
+  test('Game constructor function should create an empty array to store pets', () => {
+    const chuchu = new Pet("Chuchu")
+    const game = new Game();
+    game.addPet(chuchu);
+    expect(game.tamIndex).toEqual([chuchu]);
+  })
 });
