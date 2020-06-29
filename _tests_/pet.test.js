@@ -19,6 +19,11 @@ describe('Pet', () => {
     jest.advanceTimersByTime(19000);
     expect(chuchu.health).toEqual(1);
   })
+
+  test('should incriment this.health by 2 when called', () => {
+    chuchu.feed();
+    expect(chuchu.health).toEqual(22);
+  })
 });
 
 describe('Game', () => {

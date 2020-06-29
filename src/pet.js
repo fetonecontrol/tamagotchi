@@ -19,4 +19,7 @@ export class Pet{
       this.health--;
     }, 1000);
   }
+  feed() {
+    this.health += 2;
+  }
 }; 
