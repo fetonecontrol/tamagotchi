@@ -19,6 +19,15 @@ export class Pet{
       this.health--;
     }, 1000);
   }
+
+  checkDead(){
+    if (this.health > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   feed() {
     this.health += 2;
   }

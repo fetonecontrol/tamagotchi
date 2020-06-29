@@ -20,6 +20,11 @@ describe('Pet', () => {
     expect(chuchu.health).toEqual(1);
   })
 
+  test('should console log when health runs to 0', function(){
+    let dead = chuchu.checkDead();
+    expect(dead).toEqual(true);
+  })
+
   test('should incriment this.health by 2 when called', () => {
     chuchu.feed();
     expect(chuchu.health).toEqual(22);
