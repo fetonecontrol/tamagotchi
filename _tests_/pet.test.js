@@ -1,6 +1,8 @@
 import { Pet, Game } from './../src/Pet.js';
 
 describe('Pet', () => {
+  jest.useFakeTimers();
+  let chuchu;
 
   beforeEach(function() {
     chuchu = new Pet ("Chuchu");
@@ -12,10 +14,10 @@ describe('Pet', () => {
     expect(chuchu.happy).toEqual(20);
     expect(chuchu.health).toEqual(20);
   })
-  
+
   test('should have 0 health after 20 seconds', function(){
-    jest.advanceTimersByTime(20001);
-    expect(chuchu.health).toEqual(0);
+    jest.advanceTimersByTime(19000);
+    expect(chuchu.health).toEqual(1);
   })
 });
 
