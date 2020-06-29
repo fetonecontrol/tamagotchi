@@ -3,9 +3,11 @@ import { Pet, Game } from './../src/Pet.js';
 describe('Pet', () => {
   jest.useFakeTimers();
   let chuchu;
+  let bingo;
 
   beforeEach(function() {
-    chuchu = new Pet ("Chuchu");
+    chuchu = new Pet ("Chuchu", 20, 20);
+    bingo = new Pet ("Bingo", 20, 4);
     chuchu.setHunger();
     chuchu.setDepression();
   });  
@@ -34,6 +36,11 @@ describe('Pet', () => {
   test('should have 0 happy after 60 seconds', function(){
     jest.advanceTimersByTime(60001);
     expect(chuchu.happy).toEqual(0);
+  })
+
+  test('should not allow the pet to be fed if its happiness is under 5', function() {
+    bingo.feed();
+    expect(bingo.health).toEqual(20);
   })
 });
 

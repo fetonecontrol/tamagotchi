@@ -8,10 +8,10 @@ export class Game{
 };
 
 export class Pet{
-  constructor(name){
+  constructor(name, health, happy){
   this.name = name;
-  this.health = 20;
-  this.happy = 20;
+  this.health = health;
+  this.happy = happy;
   }
 
   setHunger() {
@@ -26,7 +26,7 @@ export class Pet{
     }, 3000);
   }
 
-  checkDead(){
+  checkDead() {
     if (this.health > 0) {
       return false;
     } else {
@@ -35,6 +35,10 @@ export class Pet{
   }
 
   feed() {
-    this.health += 2;
+    if (this.happy < 5) {
+      console.log("Your Pet is depressed!");
+    } else {
+      this.health += 2;
+    }
   }
 }; 
