@@ -76,15 +76,19 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
   - Input:
   - Output:
 
-* _This program should make the pet poop every once in a while.
+* _This program should make the pet poop every once in a while._
   - Input:
   - Output:  
 
-* _This program should make the pet become sick if you don't clean up after it_
+* _This program should make the pet become sick if you don't clean up after it._
   - Input:
   - Output:
 
-* _This program should_
+* _This program should allow the user to give the pet medicine._
+  - Input:
+  - Output:  
+
+* _This program should make it so that giving the pet medicine it gets rid of the sickness._
   - Input:
   - Output:  
 
