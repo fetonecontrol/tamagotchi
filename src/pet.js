@@ -13,4 +13,10 @@ export class Pet{
   this.health = 20;
   this.happy = 20;
   }
+
+  setHunger() {
+    setInterval(() => {
+      this.health--;
+    }, 1000);
+  }
 }; 

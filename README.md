@@ -33,17 +33,17 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
   - Input:
   - Output:
 
+* _This program should make it so the pet dies if the hunger meter becomes empty._
+  - Input:
+  - Output:   
+
 * _This program should allow the user to feed the pet._
   - Input:
   - Output:
 
 * _This program should make it so when the pet is fed, the hunger meter increases._
   - Input:
-  - Output:
-
-* _This program should make it so the pet dies if the hunger meter becomes empty._
-  - Input:
-  - Output:        
+  - Output:       
 
 * _This program should give the pet a happy meter._
   - Input:
