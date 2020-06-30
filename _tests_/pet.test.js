@@ -18,12 +18,12 @@ describe('Pet', () => {
     expect(chuchu.health).toEqual(20);
   })
 
-  test('should have 0 health after 20 seconds', function(){
+  test('should have 0 health after 20 seconds', () => {
     jest.advanceTimersByTime(20001);
     expect(chuchu.health).toEqual(0);
   })
 
-  test('should console log when health runs to 0', function(){
+  test('should console log when health runs to 0', () => {
     let dead = chuchu.checkDead();
     expect(dead).toEqual(false);
   })
@@ -33,14 +33,19 @@ describe('Pet', () => {
     expect(chuchu.health).toEqual(22);
   })
 
-  test('should have 0 happy after 60 seconds', function(){
+  test('should have 0 happy after 60 seconds', () => {
     jest.advanceTimersByTime(60001);
     expect(chuchu.happy).toEqual(0);
   })
 
-  test('should not allow the pet to be fed if its happiness is under 5', function() {
+  test('should not allow the pet to be fed if its happiness is under 5', () => {
     bingo.feed();
     expect(bingo.health).toEqual(20);
+  })
+
+  test('should increase the happiness by 5 points with every belly rub', () => {
+    bingo.bellyRub();
+    expect(bingo.happy).toEqual(9);
   })
 });
 

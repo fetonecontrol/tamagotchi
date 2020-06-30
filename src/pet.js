@@ -41,4 +41,8 @@ export class Pet{
       this.health += 2;
     }
   }
+
+  bellyRub() {
+    this.happy += 5;
+  }
 }; 
