@@ -51,8 +51,14 @@ describe('Pet', () => {
   test('should allow the pet to poop', () => {
     bingo.setPoop();
     jest.advanceTimersByTime(1001)
-    expect(bingo.sick).toEqual(1);
+    expect(bingo.sick).toEqual(2);
   })  
+
+  test('should make the pet die after a certain period of time regardless of health', () => {
+    chuchu.lifeSpan();
+    jest.advanceTimersByTime(1200001);
+    expect(chuchu.health).toEqual(1);
+  })
 });
 
 describe('Game', () => {

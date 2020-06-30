@@ -14,7 +14,7 @@ export class Pet{
   this.happy = happy;
   this.sick = sick;
   }
-  
+
 // Begin interval logic
   setHunger() {
     setInterval(() => {
@@ -36,6 +36,12 @@ export class Pet{
     this.sick += 2;
   }, 1000);
 }
+
+  lifeSpan() {
+    setTimeout(() => {
+      this.health = 0;
+    }, 1200000);
+  }
 
 // Begin pet methods
   checkDead() {
