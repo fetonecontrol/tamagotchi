@@ -61,10 +61,6 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
   - Input:
   - Output:  
 
-* _This program should cause the pet to die of loneliness if it's happiness meter depletes._
-  - Input:
-  - Output:  
-
 * _This program should assign the pet with a finite lifespan, no matter how much it is fed it will die after a period of time._
   - Input:
   - Output:  

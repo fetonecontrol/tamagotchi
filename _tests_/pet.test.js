@@ -6,8 +6,8 @@ describe('Pet', () => {
   let bingo;
 
   beforeEach(function() {
-    chuchu = new Pet ("Chuchu", 20, 20);
-    bingo = new Pet ("Bingo", 20, 4);
+    chuchu = new Pet ("Chuchu", 20, 20, 0);
+    bingo = new Pet ("Bingo", 20, 4, 0);
     chuchu.setHunger();
     chuchu.setDepression();
   });  
@@ -47,6 +47,12 @@ describe('Pet', () => {
     bingo.bellyRub();
     expect(bingo.happy).toEqual(9);
   })
+
+  test('should allow the pet to poop', () => {
+    bingo.setPoop();
+    jest.advanceTimersByTime(1001)
+    expect(bingo.sick).toEqual(1);
+  })  
 });
 
 describe('Game', () => {
